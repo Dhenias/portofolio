@@ -6,10 +6,18 @@
     <title>Portfolio</title>
     <link rel="icon" type="image/x-icon" href="img/favico.png">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/8d67162dfa.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/vue@3.5.13/dist/vue.global.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <style>
         @media (prefers-reduced-motion: no-preference) {html {scroll-behavior: smooth;}
+        body {
+            background-image: url('img/background.png');
+            background-size: 800px;
+            background-position: center;
+            background-repeat: repeat;
+        }
     </style>
 </head>
 <body class="bg-gray-50">
@@ -35,19 +43,19 @@
                                 <h1 class="text-4xl font-bold mb-4">Dhenias Syafe'i Suryawijaya</h1>
                                 <p class="text-gray-600 mb-6">Animasi - SMKN 2 Cikarang Barat</p>
                                 <div class="grid grid-cols-3 gap-4">
-                                    <div class="border p-4 text-center hover:bg-blue-100">
+                                    <div class="bg-blue-600 p-4 text-center hover:bg-blue-200 rounded-lg">
                                         <a href="#" class="flex flex-col items-center">
-                                            <img src="img/instagram.png" alt="Instagram" class="w-6 h-6 mb-2">
+                                            <i class="fa fa-instagram" style="font-size:24px;color:white"></i>
                                         </a>
                                     </div>
-                                    <div class="border p-4 text-center hover:bg-blue-100">
+                                    <div class="bg-blue-600 p-4 text-center hover:bg-blue-200 rounded-lg">
                                         <a href="#" class="flex flex-col items-center">
-                                            <img src="img/tiktok.png" alt="TikTok" class="w-6 h-6 mb-2">
+                                            <i class="fa fa-tiktok" style="font-size:24px;color:white"></i>
                                         </a>
                                     </div>
-                                    <div class="border p-4 text-center hover:bg-blue-100">
+                                    <div class="bg-blue-600 p-4 text-center hover:bg-blue-200 rounded-lg">
                                         <a href="#" class="flex flex-col items-center">
-                                            <img src="img/discord.png" alt="Silent Guardian" class="w-6 h-6 mb-2">
+                                            <i class="fa fa-discord" style="font-size:24px;color:white"></i>
                                         </a>
                                     </div>
                                 </div>
@@ -57,6 +65,7 @@
                 </div>
                 <div class="bg-blue-700 p-6 text-white rounded-lg h-full flex items-center" style="font-size:14;">
                     <p>Halo!! Saya Dhenias Syafe'i Suryawijaya, biasa dipanggil Dhenias! Minat saya ada dalam Coding, Menggambar, dan Gaming. Sebelum masuk SMKN 2 Cikarang Barat ini saya dapat dua pilihan jurusan, pilihan pertama saya adalah TKJ karena saya sangat suka dan tertarik sekali dengan teknologi, dan pilihan kedua adalah Animasi. Sayangnya saya tidak lolos di pilihan pertama saya, untungnya bukannya gagal masuk, saya masih dapat kesempatan masuk ke SMKN 2 Cikarang Barat ini dalam jurusan Animasi, saya ada minat dalam animasi karena saya sangat suka menggambar.</p>
+                </div>
             </section>
 
             <section id="skills" class="mt-16">
@@ -66,7 +75,7 @@
                 <div class="bg-blue-700 h-60 p-6 text-white rounded-lg" style="font-size:14;">
                     <p>Ini adalah gambaran keahlian saya di beberapa bidang. Saya cukup mahir dalam menggambar (75%) dan scripting di Roblox Studio dengan LUA (70%). Saya juga memiliki pemahaman HTML (60%) serta keterampilan desain (50%) yang masih terus saya kembangkan. Saya selalu berusaha meningkatkan kemampuan ini agar bisa menciptakan karya yang lebih baik dan menarik.</p>
                 </div>
-                <div class="space-y-4">
+                <div class="space-y-4 bg-white">
                     <div v-for="(skill, index) in skills" :key="'skill-'+index">
                         <div class="flex justify-between mb-2">
                             <span>{{ skill.name }}</span>
@@ -83,23 +92,26 @@
                 <h2 class="text-2xl font-bold mb-8">Arts</h2>
             </section>
             <section class="mt-8 grid md:grid-cols-2 gap-8 items-start">
-                <div class="text-white rounded-lg" style="font-size:14;">
-                    <div class="relative overflow-hidden h-80 rounded-lg">
-                        <div v-for="(image, index) in images" 
-                             :key="'image-'+index"
-                             :class="{'opacity-100': currentImage === index, 'opacity-0': currentImage !== index}"
-                             class="absolute top-0 left-0 w-full h-full transition-opacity duration-1000">
-                            <img :src="image" class="w-full h-full object-cover rounded-lg" :alt="'Slide ' + (index + 1)">
+                <div>
+                    <div class="text-white rounded-lg" style="font-size:14;">
+                        <div class="relative overflow-hidden h-80 rounded-lg">
+                            <div v-for="(image, index) in images" 
+                                :key="'image-'+index"
+                                :class="{'opacity-100': currentImage === index, 'opacity-0': currentImage !== index}"
+                                class="absolute top-0 left-0 w-full h-full transition-opacity duration-1000">
+                                <img :src="image" class="w-full h-full object-cover rounded-lg" :alt="'Art no. ' + (index + 1)">
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="bg-blue-700 p-6 text-white h-80 rounded-lg" style="font-size:14;">
                     <div class="flex flex-col justify-center h-full">
-                        <p style="text-align: center;">Saya telah mengumpulkan berbagai karya terbaik saya dalam portofolio di bawah ini:</p>
-                        <button class="bg-blue-500 p-2 text-white mt-8 mb-8 rounded-lg">
+                        <p style="text-align: center;">Di bagian ini anda dapat melihat karya-karya favorit saya :3</p>
+                        <p class="mt-5" style="text-align: center;">Cari tahu selengkapnya dengan klik tombol dibawah.</p>
+                        <p class="text-gray-300 mt-2" style="text-align: center; font-size: 10px;">(Anda akan diarahkan ke situs Google Drive)</p>
+                        <button class="bg-blue-500 p-2 text-white mt-8 mb-8 rounded-lg hover:bg-blue-400">
                             <p style="text-align:center;"><a href="https://drive.google.com/drive/folders/1YRY6vxhBZcga7_O61zJffi9IiyDZ0wia?usp=sharing" target="_blank">Drive Portofolio</a></p>
                         </button>
-                        <p>Di samping ini ada gambar-gambar favorit saya, dengan harapan gambar di samping bisa memberikan gambaran tentang style dan skill yang saya punya :3</p>
                     </div>
                 </div>
             </section>
