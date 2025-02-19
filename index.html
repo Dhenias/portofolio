@@ -23,105 +23,95 @@
 <body class="bg-gray-50">
     <div id="app">
         <header class="bg-blue-700 text-white py-6">
-            <nav class="px-0 flex justify-between items-center fixed top-0 left-0 right-0 bg-blue-700 z-50 py-4">
-                <a href="#" class="text-xl font-bold p-2">Dhenias.github.io</a>
-                <div class="space-x-6 p-2">
-                    <a href="#skills" class="hover:text-blue-200">Skills</a>
-                    <a href="#arts" class="hover:text-blue-200">Arts</a>
-                    <a href="https://trakteer.id/denyasonata?quantity=1" target="_blank" class="hover:text-blue-200">Trakteer</a>
-                </div>
-            </nav>
+            <div class="mx-6">
+                <nav class="px-6 flex justify-between items-center fixed top-0 left-0 right-0 bg-blue-700 z-50 py-4">
+                    <a href="#" class="text-xl font-bold p-2">Dhenias.github.io</a>
+                    <div class="space-x-6 p-2">
+                        <a href="#skills" class="hover:text-blue-200">Skills</a>
+                        <a href="#arts" class="hover:text-blue-200">Arts</a>
+                        <a href="https://trakteer.id/denyasonata?quantity=1" target="_blank" class="hover:text-blue-200">Trakteer</a>
+                    </div>
+                </nav>
+            </div>
         </header>
 
         <main class="container mx-auto px-4">
             <section class="mt-12 grid md:grid-cols-2 gap-8">
                 <div class="flex items-center">
                     <div>
-                        <div class="flex items-center gap-6">
+                        <div class="flex items-center bg-blue-700 bg-opacity-90 rounded-lg p-8 h-full gap-6">
                             <img src="img/favico.png" class="w-24 h-24 rounded-full object-cover">
                             <div>
-                                <h1 class="text-4xl font-bold mb-4">Dhenias Syafe'i Suryawijaya</h1>
-                                <p class="text-gray-600 mb-6">Animasi - SMKN 2 Cikarang Barat</p>
-                                <div class="grid grid-cols-3 gap-4">
-                                    <div class="bg-blue-600 p-4 text-center hover:bg-blue-200 rounded-lg">
-                                        <a href="#" class="flex flex-col items-center">
-                                            <i class="fa fa-instagram" style="font-size:24px;color:white"></i>
-                                        </a>
-                                    </div>
-                                    <div class="bg-blue-600 p-4 text-center hover:bg-blue-200 rounded-lg">
-                                        <a href="#" class="flex flex-col items-center">
-                                            <i class="fa fa-tiktok" style="font-size:24px;color:white"></i>
-                                        </a>
-                                    </div>
-                                    <div class="bg-blue-600 p-4 text-center hover:bg-blue-200 rounded-lg">
-                                        <a href="#" class="flex flex-col items-center">
-                                            <i class="fa fa-discord" style="font-size:24px;color:white"></i>
-                                        </a>
-                                    </div>
-                                </div>
+                                <h1 class="text-4xl text-white font-bold mb-4">Dhenias Syafe'i Suryawijaya</h1>
+                                <p class="text-gray-100 mb-6">Animasi - SMKN 2 Cikarang Barat</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="bg-blue-700 p-6 text-white rounded-lg h-full flex items-center" style="font-size:14;">
+                <div class="bg-blue-700 p-6 text-white rounded-lg h-full flex items-center bg-opacity-90" style="font-size:14;">
                     <p>Halo!! Saya Dhenias Syafe'i Suryawijaya, biasa dipanggil Dhenias! Minat saya ada dalam Coding, Menggambar, dan Gaming. Sebelum masuk SMKN 2 Cikarang Barat ini saya dapat dua pilihan jurusan, pilihan pertama saya adalah TKJ karena saya sangat suka dan tertarik sekali dengan teknologi, dan pilihan kedua adalah Animasi. Sayangnya saya tidak lolos di pilihan pertama saya, untungnya bukannya gagal masuk, saya masih dapat kesempatan masuk ke SMKN 2 Cikarang Barat ini dalam jurusan Animasi, saya ada minat dalam animasi karena saya sangat suka menggambar.</p>
                 </div>
             </section>
 
-            <section id="skills" class="mt-16">
-                <h2 class="text-2xl font-bold mb-8">Skills</h2>
+            <section id="skills">
+                <br>
             </section>
-            <section class="mt-8 grid md:grid-cols-2 gap-8 items-start">
-                <div class="bg-blue-700 h-60 p-6 text-white rounded-lg" style="font-size:14;">
-                    <p>Ini adalah gambaran keahlian saya di beberapa bidang. Saya cukup mahir dalam menggambar (75%) dan scripting di Roblox Studio dengan LUA (70%). Saya juga memiliki pemahaman HTML (60%) serta keterampilan desain (50%) yang masih terus saya kembangkan. Saya selalu berusaha meningkatkan kemampuan ini agar bisa menciptakan karya yang lebih baik dan menarik.</p>
-                </div>
-                <div class="space-y-4 bg-white">
-                    <div v-for="(skill, index) in skills" :key="'skill-'+index">
-                        <div class="flex justify-between mb-2">
-                            <span>{{ skill.name }}</span>
-                            <span>{{ skill.percentage }}%</span>
-                        </div>
-                        <div class="w-full bg-gray-200 rounded">
-                            <div class="bg-blue-600 h-2 rounded" :style="{ width: skill.percentage + '%' }"></div>
-                        </div>
+            <section>
+                <h2 class="mt-16 text-2xl text-blue-950 font-bold mb-8">Skills</h2>
+                <div class="mt-8 grid md:grid-cols-2 gap-8 items-start">
+                    <div class="bg-blue-700 h-full p-6 text-white rounded-lg bg-opacity-90" style="font-size:14;">
+                        <p>Ini adalah gambaran keahlian saya di beberapa bidang. Saya cukup mahir dalam menggambar. Saya juga memiliki pemahaman Roblox Studio (LUA), HTML, Microsoft Excel, serta keterampilan desain yang masih terus saya kembangkan. Saya selalu berusaha meningkatkan kemampuan ini agar bisa menciptakan karya yang lebih baik dan menarik.</p>
                     </div>
-                </div>
-            </section>
-
-            <section id="arts" class="mt-16">
-                <h2 class="text-2xl font-bold mb-8">Arts</h2>
-            </section>
-            <section class="mt-8 grid md:grid-cols-2 gap-8 items-start">
-                <div>
-                    <div class="text-white rounded-lg" style="font-size:14;">
-                        <div class="relative overflow-hidden h-80 rounded-lg">
-                            <div v-for="(image, index) in images" 
-                                :key="'image-'+index"
-                                :class="{'opacity-100': currentImage === index, 'opacity-0': currentImage !== index}"
-                                class="absolute top-0 left-0 w-full h-full transition-opacity duration-1000">
-                                <img :src="image" class="w-full h-full object-cover rounded-lg" :alt="'Art no. ' + (index + 1)">
+                    <div class="space-y-4 bg-blue-100 bg-opacity-40 rounded-lg p-4">
+                        <div v-for="(skill, index) in skills" :key="'skill-'+index">
+                            <div class="flex justify-between mb-2">
+                                <span>{{ skill.name }}</span>
+                                <span>{{ skill.percentage }}%</span>
+                            </div>
+                            <div class="w-full bg-gray-400 rounded">
+                                <div class="bg-blue-600 h-2 rounded" :style="{ width: skill.percentage + '%' }"></div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="bg-blue-700 p-6 text-white h-80 rounded-lg" style="font-size:14;">
-                    <div class="flex flex-col justify-center h-full">
-                        <p style="text-align: center;">Di bagian ini anda dapat melihat karya-karya favorit saya :3</p>
-                        <p class="mt-5" style="text-align: center;">Cari tahu selengkapnya dengan klik tombol dibawah.</p>
-                        <p class="text-gray-300 mt-2" style="text-align: center; font-size: 10px;">(Anda akan diarahkan ke situs Google Drive)</p>
-                        <button class="bg-blue-500 p-2 text-white mt-8 mb-8 rounded-lg hover:bg-blue-400">
-                            <p style="text-align:center;"><a href="https://drive.google.com/drive/folders/1YRY6vxhBZcga7_O61zJffi9IiyDZ0wia?usp=sharing" target="_blank">Drive Portofolio</a></p>
-                        </button>
+            </section>
+
+            <section id="arts">
+                <br>
+            </section>
+            <section>
+                <h2 class="mt-16 text-2xl text-blue-950 font-bold mb-8">Arts</h2>
+                <div class="mt-8 grid md:grid-cols-2 gap-8 items-start">
+                    <div>
+                        <div class="text-white rounded-lg" style="font-size:14">
+                            <div class="relative overflow-hidden h-80 rounded-lg">
+                                <div v-for="(image, index) in images" 
+                                    :key="'image-'+index"
+                                    :class="{'opacity-100': currentImage === index, 'opacity-0': currentImage !== index}"
+                                    class="absolute top-0 left-0 w-full h-full transition-opacity duration-1000">
+                                    <img :src="image" class="w-full h-full object-cover rounded-lg" :alt="'Art no. ' + (index + 1)">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-blue-700 p-6 text-white h-80 rounded-lg bg-opacity-90" style="font-size:14;">
+                        <div class="flex flex-col justify-center h-full">
+                            <p style="text-align: center;">Di bagian ini anda dapat melihat karya-karya favorit saya :3</p>
+                            <p class="mt-5" style="text-align: center;">Cari tahu selengkapnya dengan klik tombol dibawah.</p>
+                            <p class="text-gray-300 mt-2" style="text-align: center; font-size: 10px;">(Anda akan diarahkan ke situs Google Drive)</p>
+                            <button class="bg-blue-500 p-2 text-white mt-8 mb-8 rounded-lg hover:bg-blue-400">
+                                <p style="text-align:center;"><a href="https://drive.google.com/drive/folders/1YRY6vxhBZcga7_O61zJffi9IiyDZ0wia?usp=sharing" target="_blank">Drive Portofolio</a></p>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </section>
-
         </main>
 
         <footer class="bg-blue-700 text-white mt-16 py-16">
             <div class="container mx-auto px-4">
                 <h2 class="text-2xl font-bold mb-2">Contact Me!</h2>
-                <a href="https://wa.me/6285129249774">+62 851-2924-9774</a>
+                <p><i class="fa fa-phone-square"></i> <a href="https://wa.me/6285129249774">+62 851-2924-9774</a></p>
                 <p class="mt-8">Dhenias Syafe'i Suryawijaya</p>
             </div>
         </footer>
@@ -136,6 +126,7 @@
                     { name: 'Drawing', percentage: 75 },
                     { name: 'Roblox Studio (LUA)', percentage: 70 },
                     { name: 'HTML', percentage: 60 },
+                    { name: 'Excel', percentage: 65 },
                     { name: 'Design', percentage: 50 }
                 ]);
 
