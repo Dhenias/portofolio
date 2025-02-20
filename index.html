@@ -18,6 +18,14 @@
             background-position: center;
             background-repeat: repeat;
         }
+        .zoom {
+            transition: transform .2s ease-in-out;
+        }
+        .zoom:hover {
+            transform: scale(1.05);
+            -ms-transform: scale(1.05);
+            -webkit-transform: scale(1.05);
+        }
     </style>
 </head>
 <body class="bg-gray-50">
@@ -39,7 +47,7 @@
             <section class="mt-12 grid md:grid-cols-2 gap-8">
                 <div class="flex items-center">
                     <div>
-                        <div class="flex items-center bg-blue-700 bg-opacity-90 rounded-lg p-8 h-full gap-6">
+                        <div class="zoom flex items-center bg-blue-700 bg-opacity-90 rounded-lg p-8 h-full gap-6">
                             <img src="img/favico.png" class="w-24 h-24 rounded-full object-cover">
                             <div>
                                 <h1 class="text-4xl text-white font-bold mb-4">Dhenias Syafe'i Suryawijaya</h1>
@@ -48,7 +56,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="bg-blue-700 p-6 text-white rounded-lg h-full flex items-center bg-opacity-90" style="font-size:14;">
+                <div class="zoom bg-blue-700 p-6 text-white rounded-lg h-full flex items-center bg-opacity-90" style="font-size:14;">
                     <p>Halo!! Saya Dhenias Syafe'i Suryawijaya, biasa dipanggil Dhenias! Minat saya ada dalam Coding, Menggambar, dan Gaming. Sebelum masuk SMKN 2 Cikarang Barat ini saya dapat dua pilihan jurusan, pilihan pertama saya adalah TKJ karena saya sangat suka dan tertarik sekali dengan teknologi, dan pilihan kedua adalah Animasi. Sayangnya saya tidak lolos di pilihan pertama saya, untungnya bukannya gagal masuk, saya masih dapat kesempatan masuk ke SMKN 2 Cikarang Barat ini dalam jurusan Animasi, saya ada minat dalam animasi karena saya sangat suka menggambar.</p>
                 </div>
             </section>
@@ -59,10 +67,10 @@
             <section>
                 <h2 class="mt-16 text-2xl text-blue-950 font-bold mb-8">Skills</h2>
                 <div class="mt-8 grid md:grid-cols-2 gap-8 items-start">
-                    <div class="bg-blue-700 h-full p-6 text-white rounded-lg bg-opacity-90" style="font-size:14;">
+                    <div class="zoom bg-blue-700 h-full p-6 text-white rounded-lg bg-opacity-90" style="font-size:14;">
                         <p>Ini adalah gambaran keahlian saya di beberapa bidang. Saya cukup mahir dalam menggambar. Saya juga memiliki pemahaman Roblox Studio (LUA), HTML, Microsoft Excel, serta keterampilan desain yang masih terus saya kembangkan. Saya selalu berusaha meningkatkan kemampuan ini agar bisa menciptakan karya yang lebih baik dan menarik.</p>
                     </div>
-                    <div class="space-y-4 bg-blue-100 bg-opacity-40 rounded-lg p-4">
+                    <div class="zoom space-y-4 bg-blue-100 bg-opacity-40 rounded-lg p-4">
                         <div v-for="(skill, index) in skills" :key="'skill-'+index">
                             <div class="flex justify-between mb-2">
                                 <span>{{ skill.name }}</span>
